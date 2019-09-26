@@ -1,1 +1,14 @@
-<h3>Translate Page</h3>
+<h3>English to Braille</h3>
+
+<br />
+
+<b><%= label_tag :translation %>:</b><br />
+<%= text_area_tag 'translation', nil, rows: 6, cols: 60, disabled: true %>
+
+<div id="translation"></div>
+
+<br /><br />
+
+<b><%= label_tag :user_input %>:</b><br />
+<%= text_area_tag :user_input, nil, rows: 6, cols: 60 %>
+
