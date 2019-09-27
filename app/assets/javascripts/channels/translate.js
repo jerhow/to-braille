@@ -9,9 +9,36 @@ App.translate = App.cable.subscriptions.create("TranslateChannel", {
 
   received: function(data) {
     // Called when there's incoming data on the websocket for this channel
+
+    if (stack.length < $('#user_input').val().length) {
+      stack.push(data.message);
+    } else {
+      stack.pop();
+    }
+
+    console.log(stack);
+
+    $('#translation').html(stack.join(''))
   },
 
-  respond: function() {
-    return this.perform('respond');
+  respond: function(msg) {
+    return this.perform('respond', { message: msg });
   }
 });
+
+$( document ).ready(function() {
+
+  $('#user_input').on('input', function() {
+    
+    // console.log( $('#user_input').val() );
+    str = $('#user_input').val();
+    
+    App.translate.respond(
+      str.charAt(str.length - 1)
+    );
+
+  });
+
+});
+
+var stack = [];
