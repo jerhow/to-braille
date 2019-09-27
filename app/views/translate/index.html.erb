@@ -1,12 +1,7 @@
-<h3>English to Braille</h3>
-
-<div class="break" style="height: 20px;"></div>
-
-<b><%= label_tag :translation %>:</b><br />
-<%= text_area_tag :translation, nil, rows: 6, cols: 60, disabled: true %>
+<b><%= label_tag :english %>:</b><br />
+<%= text_area_tag :user_input, nil, placeholder: "Start typing here...", rows: 6, cols: 60, focus: true %>
 
 <div class="break" style="height: 25px;"></div>
 
-<b><%= label_tag :user_input %>:</b><br />
-<%= text_area_tag :user_input, nil, rows: 6, cols: 60 %>
-
+<b><%= label_tag :braille %>:</b><br />
+<%= text_area_tag :translation, nil, rows: 6, cols: 60, disabled: true %>
