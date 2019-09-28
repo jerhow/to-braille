@@ -10,6 +10,24 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+a:link {
+    color: blue;
+    text-decoration: none;
+}
+
+a:visited {
+    color: blue;
+}
+
+a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+a:active {
+    color: blue;
+}
+
 .break {
   display: block;
 }
@@ -92,32 +110,44 @@ body {
     text-decoration: none;
 }
 
+#homepage-blurb {
+  color: #000000;
+}
+
 @media screen and (min-width: 768px) {
 
-    #translation {
-      font-size: 2.5rem;
-      width: 700px;
-      height: 150px;
-    }
+  #homepage-blurb {
+    width: 600px;
+  }
 
-    #user_input {
-      font-size: 1.2rem;
-      width: 700px;
-      height: 150px;
-    }
+  #translation {
+    font-size: 2.5rem;
+    width: 700px;
+    height: 150px;
+  }
+
+  #user_input {
+    font-size: 1.2rem;
+    width: 700px;
+    height: 150px;
+  }
 }
 
 @media screen and (min-width: 275px) and (max-width: 767px) {
 
-    #translation {
-      font-size: 2.5rem;
-      width: 90%;
-      height: 150px;
-    }
+  #homepage-blurb {
+    width: 90%;
+  }
 
-    #user_input {
-      font-size: 1.2rem;
-      width: 90%;
-      height: 150px;
-    }
+  #translation {
+    font-size: 2.5rem;
+    width: 90%;
+    height: 150px;
+  }
+
+  #user_input {
+    font-size: 1.2rem;
+    width: 90%;
+    height: 150px;
+  }
 }
