@@ -1,26 +1,26 @@
 <div id="homepage-blurb">
   <p>Hello there!</p>
   <p>
-    This is a pet project, a proof-of-concept English to Braille translator.
+    This is a pet project, an English to Braille translator.
     <br />
     The curious are welcome to try it <a href="translate">by clicking here</a>.
   </p>
   <p>
     ---<br />
-    <span style="font-weight: bold;">Backstory, for anyone interested in programming:</span> I recently became interested in Braille. Also of late, I've been looking for 
-    an app idea for learning about <span style="font-style: italic;">Action Cable</span>.
+    <span style="font-weight: bold;">Backstory, for those interested in programming:</span> 
+    <br />
+    I recently became interested in Braille. Also of late, I've been looking for 
+    an idea which I could implement with Action Cable, the WebSocket library
+    that ships with Rails 5 and later. A real-time translator seemed like fun, hence this project.
   </p>
   <p>
-    <a href="https://guides.rubyonrails.org/action_cable_overview.html" title="Action Cable">Action Cable</a> 
-    is a library in the Ruby on Rails framework which implements real-time communication 
-    over <span style="font-style: italic;">WebSockets</span>.
+    For this proof-of-concept, the browser sends the individual characters, as they are typed, to the server for translation.
+    This communication runs over a persistent WebSocket connection to a Rails backend running Action Cable. 
+    The translated braille is sent back to the client over the same WebSocket, and rendered as unicode html entities 
+    in a separate DOM element.
   </p>
   <p>
-    <a href="https://en.wikipedia.org/wiki/WebSocket" title="WebSockets">WebSockets</a> provide persistent, full-duplex TCP socket connections between clients and servers. 
-  </p>
-  <p>
-    The point being, I decided to build this translator with Action Cable to 
-    get the feel for using it.
+    Simple yet very cool, especially when you're used to stateless, half-duplex HTTP programming.
   </p>
   <p>
     ---<br />
