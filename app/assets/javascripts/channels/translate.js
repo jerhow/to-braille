@@ -16,9 +16,16 @@ App.translate = App.cable.subscriptions.create("TranslateChannel", {
       stack.pop();
     }
 
-    console.log(stack);
+    var diff = stack.length - $('#user_input').val().length;
+    if(diff > 0) {
+      for(var i = 0; i < diff; i++) {
+        stack.pop();
+      }
+    }
 
-    $('#translation').html(stack.join(''))
+    // console.log(stack);
+
+    $('#translation').html(stack.join(''));
   },
 
   respond: function(msg) {
