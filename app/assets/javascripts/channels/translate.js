@@ -10,20 +10,20 @@ App.translate = App.cable.subscriptions.create("TranslateChannel", {
   received: function(data) {
     // Called when there's incoming data on the websocket for this channel
 
-    if (stack.length < $('#user_input').val().length) {
+    var inputLength = $('#user_input').val().length;
+
+    if (stack.length < inputLength) {
       stack.push(data.message);
     } else {
       stack.pop();
     }
 
-    var diff = stack.length - $('#user_input').val().length;
+    var diff = stack.length - inputLength;
     if(diff > 0) {
       for(var i = 0; i < diff; i++) {
         stack.pop();
       }
     }
-
-    // console.log(stack);
 
     $('#translation').html(stack.join(''));
   },
