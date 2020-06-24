@@ -2,9 +2,6 @@
 
 A small side project which implements a real-time English to Braille translator with Rails and Action Cable
 
-It's a work in progress, but you can check it out here: [tobraille.com](https://tobraille.com)
-
-
 ### Rationale
 I recently became interested in Braille. Also of late, I've been looking for an idea which I could implement with Action Cable, the WebSocket library that ships with Rails. A real-time translator seemed like a fun way to continue exploring Braille, hence this project.
 
