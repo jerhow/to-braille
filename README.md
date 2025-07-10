@@ -8,7 +8,7 @@ I recently became interested in Braille. Also of late, I've been looking for an 
 ### Notes
 Built with Ruby 2.6 + Rails 5.2 + WebSockets
 
-More to come:<br/>
+### More to come
 - Right now the app does Grade 1 (uncontracted) Braille translations. As I spend more time with it, Grade 2 contractions should become possible.
 - Proper support for capitalization
 - Minor bug fixes and enhancements
